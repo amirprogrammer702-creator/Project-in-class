@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">نام</label>
+    <input type="text" name="username" id="username" placeholder="نام کاربری">
+    <br>
+        <input type="password"  id="password" placeholder="رمز ورود "><br>
+    <button onclick="login()">ورود</button>
+    <p id="demo"></p>
+
+    <script>
+        
+        
+        let uname = document.querySelector("#username");
+        let psw = document.querySelector("#password");
+        let para = document.querySelector("#demo");
+        function login() {
+            if (uname.value == "admin" && psw.value=="1234") {
+                
+                para.textContent = "خوش آمدید";
+              
+                para.textContent="خوش امدید";
+                }
+                else{
+                    para.textContent="دوباره تلاش کنید";
+                }
+            }
+        
+    </script>
+</body>
+
+</html>
