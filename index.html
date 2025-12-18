@@ -22,7 +22,7 @@
         padding: 20px;
       }
     }
-    /* نمایش ایمیل اول به صورت پیش‌فرض */
+  
     #Borge { display: block; }
     .email { display: none; }
     
@@ -214,37 +214,31 @@
   </div>
 </div>
 
-<script>
-  // تابع باز کردن ایمیل
-  function openMail(person) {
-    // مخفی کردن همه ایمیل‌ها
+<script>
+  function openMail(person) {
     const emails = document.getElementsByClassName("email");
     for (let i = 0; i < emails.length; i++) {
       emails[i].style.display = "none";
-    }
-    // نمایش ایمیل انتخاب شده
-    document.getElementById(person).style.display = "block";
-    
-    // بستن منوی موبایل در صورت باز بودن بعد از انتخاب ایمیل
+    } document.getElementById(person).style.display = "block";   
     const menu = document.getElementById('mobileMenu');
     const bsOffcanvas = bootstrap.Offcanvas.getInstance(menu);
     if (bsOffcanvas) {
       bsOffcanvas.hide();
     }
     
-    // اسکرول به بالا در موبایل
+   
     window.scrollTo(0, 0);
   }
 
-  // تابع باز کردن مودال پیام جدید
+  
   function openNewMessage() {
-    // بستن منوی موبایل اگر باز است
+   
     const menu = document.getElementById('mobileMenu');
     const bsOffcanvas = bootstrap.Offcanvas.getInstance(menu);
     if (bsOffcanvas) {
       bsOffcanvas.hide();
     }
-    // نمایش مودال
+    
     const myModal = new bootstrap.Modal(document.getElementById('newMessageModal'));
     myModal.show();
   }
